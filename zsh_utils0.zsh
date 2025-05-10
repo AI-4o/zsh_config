@@ -98,6 +98,36 @@ function grpc() {
   gh repo create "$1" --public --source=. --remote=origin
 }
 
+function grpg() {
+  if [[ -z "$1" ]]; then
+    echo "Error: repository name is required."
+    echo "Use '-h' for help."
+    return 1
+  fi
+  if [[ "$1" == "-h" || "$1" == "--help" ]]; then
+    echo "Usage: grpg <repository name>"
+    echo "Opens the repo in the browser"
+    echo "Example: grpg repo-name" 
+    return 0
+  fi
+  gh repo view $1 -w
+}
+
+function grpf() {
+  if [[ -z "$1" ]]; then
+    echo "Error: repository name is required."
+    echo "Use '-h' for help."
+    return 1
+  fi
+  if [[ "$1" == "-h" || "$1" == "--help" ]]; then
+    echo "Usage: grpf <repository name>"
+    echo "lists the gh repos that have name containing the given string"
+    echo "Example: grpf repo-name" 
+    return 0
+  fi
+  gh repo list | grep -E $1  | awk '{print $1}'
+}
+
 function grprm() {
   if [[ -z "$1" ]]; then
     echo "Error: repository name is required."
