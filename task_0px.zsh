@@ -3,7 +3,7 @@
 # create a git worktree related to the current branch
 # opens cursor on the worktree directory
 
-tsk() {
+llmtask() {
     # Check if help flag is provided
     if [[ "$1" == "--help" || "$1" == "-h" ]]; then
         echo "task: Manage git worktrees for tasks"

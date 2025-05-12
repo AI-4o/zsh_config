@@ -22,3 +22,19 @@ eval "$(pyenv init -)"
 export PATH="$PATH:$HOME/.composer/vendor/bin"
 
 printenv | sort > "$HOME/.zsh_initial_env"
+
+
+# utility functions
+function cndrg() {
+  if [[ "$1" == "-h" || "$1" == "--help" ]]; then
+    echo "Usage: conda_env <environment grep name>"
+    echo "deletes the envs that have a name that matches the grep"
+    return 0
+  fi
+  if [[ -z "$1" ]]; then
+    echo "Error: environment name is required."
+    echo "Use '-h' for help."
+    return 1
+  fi
+  conda env list | grep "$*"  | awk '{print $1}' | xargs -I {} conda env remove -y --name {}
+}

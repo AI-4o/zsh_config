@@ -1,10 +1,13 @@
 # This file contains: aliases, hashes, env variables, utility functions
 
-
 ### ALIASES ###
 
 # Application
 alias och='open -a "Google Chrome"'
+
+# custom cli 
+alias tsk='llmtask'
+
 
 # FE
 #
@@ -15,16 +18,24 @@ alias ol='open-localhost'
 # brew 
 alias w='brew'
 alias wl='brew list'
-
 alias wss='brew services start'
 alias wsl='brew services list'
 alias wsp='brew services stop'
 alias wsrm='brew services remove'
 
+# docker
+alias d='docker'
+alias dps='docker ps'
+alias dpsa='docker ps -a'
+alias di='docker images'
+alias dpr='docker pull'
+alias dr='docker run'
+alias dprr='docker run -it --rm'
+alias dprrm='docker run -it --rm -v $(pwd):/app -w /app'
 
 # basic aliases
 alias n='nvim'
-alias c='cursor .'
+alias to='touch'
 alias cpr='cp -r'
 # alias scp='pbcopy' ---> in raycast per avere aggiunta di |
 # alias spt='$(pbpaste)' ---> in raycast per avere aggiunta di |
@@ -56,7 +67,9 @@ alias gbv='git branch -v'
 alias gbd='git branch -D'
 alias gr='git restore'
 alias agg='git branch --show-current | pbcopy && git checkout x &&   git branch --show-current  | pbcopy && git pull && git checkout $pippo[1] && git merge $pippo[2] && git push &&  pbclear'
-alias gra='git remote add origin'
+alias grea='git remote add origin'
+alias grev='git remote -v'
+alias grerm='git remote remove origin'
 alias grpl='gh repo list'
 alias gm='git merge'
 alias gff='git diff'
@@ -65,6 +78,14 @@ alias gsa='git stash apply'
 alias gsp='git stash push'
 alias gsl='git stash list'
 alias gsr='git stash drop'
+
+#pip aliases
+
+alias pipi='pip install'
+alias pipu='pip uninstall'
+alias pipf='pip freeze > requirements.txt'
+alias pipir='pip install -r requirements.txt'
+alias pipl='pip list'
 
 
 # awk aliases
@@ -118,8 +139,9 @@ alias clc='claude code'
 # c 
 
 
-# generic aliases
-alias lorem=' lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet lorem ipsum dolor sit amet '
+# utmcl aliases
+alias uu='utmctl'
+
 
 ### NODE.JS ###
 export NODE_OPTIONS="--no-deprecation"
@@ -139,6 +161,3 @@ export esp="~/Library/Application Support/espanso/match"
 export td=/Users/a.i./dev-test/note/todo.md
 export bk=/Users/a.i./dev-test/note/study/books
 export w=/opt/homebrew/var/www
-
-# config of claude desktop mcps
-export mcp=/Users/a.i./Library/Application\ Support/Claude/claude_desktop_config.json
