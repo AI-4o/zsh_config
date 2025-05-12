@@ -37,6 +37,7 @@ alias dprrm='docker run -it --rm -v $(pwd):/app -w /app'
 alias n='nvim'
 alias to='touch'
 alias cpr='cp -r'
+# alias opa='open -a' ---> in raycast 
 # alias scp='pbcopy' ---> in raycast per avere aggiunta di |
 # alias spt='$(pbpaste)' ---> in raycast per avere aggiunta di |
 alias rmf='rm -rf'
@@ -87,6 +88,7 @@ alias pipf='pip freeze > requirements.txt'
 alias pipir='pip install -r requirements.txt'
 alias pipl='pip list'
 
+alias venv='python3 -m venv'
 
 # awk aliases
 #
