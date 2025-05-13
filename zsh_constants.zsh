@@ -163,7 +163,7 @@ alias uu='utmctl'
 ### NODE.JS ###
 export NODE_OPTIONS="--no-deprecation"
 
-### CUSTOM GLOBAL VARIABLES ###
+### CUSTOM GLOBAL VARIABLES OF DIRECTORIES ###
 export v=~/dev-test/
 export c=/Users/a.i./Library/Mobile\ Documents/com~apple~CloudDocs/cloud-docs
 export d=/Users/a.i./Downloads
@@ -178,3 +178,7 @@ export esp="~/Library/Application Support/espanso/match"
 export td=/Users/a.i./dev-test/note/todo.md
 export bk=/Users/a.i./dev-test/note/study/books
 export w=/opt/homebrew/var/www
+
+### RECURRENT FILES ###
+alias todo='nvim /Users/a.i./dev-test/note/todo.md'
+alias cred='nvim /Users/a.i./dev-test/note/credenziali.md'
