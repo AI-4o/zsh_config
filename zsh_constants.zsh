@@ -3,17 +3,32 @@
 ### ALIASES ###
 
 # Application
+alias oa='open -a'
+alias ka='pkill -x'
+
 alias och='open -a "Google Chrome"'
+alias kch='pkill -x "Google Chrome"'
+alias ow='open -a "whatsapp"'
+alias kw='pkill -x "whatsapp"'
+alias omai='open -a "Mail"'
+alias kmai='pkill -x "Mail"'
+alias ocal='open -a "Calendar"'
+alias kcal='pkill -x "Calendar"'
+alias oout='open -a "Outlook"'
+alias kout='pkill -x "Outlook"'
 
 # custom cli 
 alias tsk='llmtask'
-
 
 # FE
 #
 # REACT
 alias nextc='npx create-next-app@latest'
 alias ol='open-localhost'
+
+# aider
+alias ai='aider --model sonnet' 
+
 
 # brew 
 alias w='brew'
