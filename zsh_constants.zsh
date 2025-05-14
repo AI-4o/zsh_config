@@ -1,52 +1,25 @@
 # This file contains: aliases, hashes, env variables, utility functions
 
-### ALIASES ###
+### ALIASES ##
+. /users/a.i./zsh/applications.zsh
+. /users/a.i./zsh/brew.zsh
+. /users/a.i./zsh/conda.zsh
+. /users/a.i./zsh/docker.zsh
+. /users/a.i./zsh/git.zsh
+. /users/a.i./zsh/ollama.zsh
+. /users/a.i./zsh/pip.zsh
+. /users/a.i./zsh/pnpm.zsh
+. /users/a.i./zsh/react.zsh
+. /users/a.i./zsh/rust.zsh
+. /users/a.i./zsh/vercel.zsh
 
-# Application
-alias oa='open -a'
-alias ka='pkill -x'
-
-alias och='open -a "Google Chrome"'
-alias kch='pkill -x "Google Chrome"'
-alias ow='open -a "whatsapp"'
-alias kw='pkill -x "whatsapp"'
-alias omai='open -a "Mail"'
-alias kmai='pkill -x "Mail"'
-alias ocal='open -a "Calendar"'
-alias kcal='pkill -x "Calendar"'
-alias oout='open -a "Outlook"'
-alias kout='pkill -x "Outlook"'
-
-# custom cli 
+# stom cli 
 alias tsk='llmtask'
 
 # FE
 #
-# REACT
-alias nextc='npx create-next-app@latest'
-alias ol='open-localhost'
-
 # aider
 alias ai='aider --model sonnet' 
-
-
-# brew 
-alias w='brew'
-alias wl='brew list'
-alias wss='brew services start'
-alias wsl='brew services list'
-alias wsp='brew services stop'
-alias wsrm='brew services remove'
-
-# docker
-alias d='docker'
-alias dps='docker ps'
-alias dpsa='docker ps -a'
-alias di='docker images'
-alias dpr='docker pull'
-alias dr='docker run'
-alias dprr='docker run -it --rm'
-alias dprrm='docker run -it --rm -v $(pwd):/app -w /app'
 
 # basic aliases
 alias n='nvim'
@@ -61,48 +34,6 @@ alias mkd='mkdir'
 alias lcl='open-localhost'
 alias chx='chmod +x'
 
-# ### comandi delegati a raycast ###
-#
-# sccp =  pbcopy  && {cursor} $(pbpaste) 
-# 
-# µ0, µ1, ... = prompts per llm 
-# 
-# chmx = chmod +x
-# internet = look on the internet for details
-
-# git aliases
-alias ga='git add'
-alias gck='git checkout'
-alias gckb='git checkout -b'
-alias gp='git push'
-alias gpl='git pull'
-alias gcz='git cz'
-alias gs='git status'
-alias gbc='git branch --show-current'
-alias gbv='git branch -v'
-alias gbd='git branch -D'
-alias gr='git restore'
-alias agg='git branch --show-current | pbcopy && git checkout x &&   git branch --show-current  | pbcopy && git pull && git checkout $pippo[1] && git merge $pippo[2] && git push &&  pbclear'
-alias grea='git remote add origin'
-alias grev='git remote -v'
-alias grerm='git remote remove origin'
-alias grpl='gh repo list'
-alias gm='git merge'
-alias gff='git diff'
-alias gst='git stash'
-alias gsa='git stash apply'
-alias gsp='git stash push'
-alias gsl='git stash list'
-alias gsr='git stash drop'
-
-#pip aliases
-
-alias pipi='pip install'
-alias pipu='pip uninstall'
-alias pipf='pip freeze > requirements.txt'
-alias pipir='pip install -r requirements.txt'
-alias pipl='pip list'
-
 alias venv='python3 -m venv'
 
 # awk aliases
@@ -111,47 +42,7 @@ alias venv='python3 -m venv'
 #
 # awkp = awk '{print ${cursor}}'
 
-# rust
-alias crr='cargo run'
-alias crb='cargo build'
-alias cra='cargo add'
-alias crt='cargo test'
-
-# vercel cli
-alias vr='vercel'
-alias vrd='vercel deploy'
-alias vre='vercel env'
-alias vrl='vercel link'
-alias vrp='vercel pull'
-
-# pnpm aliases
-alias pa='pnpm add'
-alias dev='pnpm run dev'
-alias serve='pnpm run serve'
-alias build='pnpm run build'
-alias test='pnpm run test'
-alias start='pnpm run start'
-alias isd='pnpm i  && open-localhost  &&  pnpm run dev'
-
-# python aliases
 alias pn='python3'
-alias cndl="conda env list"
-alias cnda="conda activate"
-alias cndd="conda deactivate"
-alias cndr="conda env remove -y --name"
-alias cndc="conda env create -f environment.yml"
-alias cnde="conda env export > environment.yml"
-
-# ollama aliases
-alias ll='ollama'
-alias lll='ollama list'
-alias llr='ollama run'
-alias llpl='ollama pull'
-alias llp='ollama push'
-alias llrm='ollama remove'
-alias lls='ollama show'
-
-alias clc='claude code'
 
 # c 
 

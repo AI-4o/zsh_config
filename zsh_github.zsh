@@ -25,6 +25,16 @@ function ghc() {
   gh repo create "$1" --source=. --private --remote=origin
 }
 
+
+function ghl() {
+  if [[ "$1" == "-h" || "$1" == "--help" ]]; then
+    echo "Usage: ghl"
+    echo "Lists all GitHub repositories"
+    return 0
+  fi
+  gh repo list
+}
+
 function gho() {
   if [[ -z "$1" ]]; then
     echo "Error: repository name is required."
