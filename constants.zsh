@@ -77,5 +77,5 @@ export w=/opt/homebrew/var/www
 export b=~/bin
 
 ### RECURRENT FILES ###
-alias todo='nvim /Users/a.i./dev-test/note/todo.md'
-alias cred='nvim /Users/a.i./dev-test/note/credenziali.md'
+alias otd='nvim /Users/a.i./dev-test/note/todo.md'
+alias ocred='nvim /Users/a.i./dev-test/note/credenziali.md'

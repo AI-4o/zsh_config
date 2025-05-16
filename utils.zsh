@@ -1,4 +1,4 @@
-function ct() {
+function cr() {
   if [[ "$1" == "-h" ]]; then
     echo "Usage: ct [nome_script]"
     return 0 

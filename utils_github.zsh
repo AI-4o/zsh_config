@@ -36,7 +36,11 @@ function ghl() {
 }
 
 function gho() {
-  if [[ -z "$1" ]]; then
+  local repo="$1"
+  if [[ -z "$repo" ]]; then
+    read -r repo
+  fi
+  if [[ -z "$repo" ]]; then
     echo "Error: repository name is required."
     echo "Use '-h' for help."
     return 1
@@ -47,11 +51,15 @@ function gho() {
     echo "Example: grpg repo-name" 
     return 0
   fi
-  gh repo view $1 -w
+  gh repo view $repo -w
 }
 
 function ghsc() {
-  if [[ -z "$1" ]]; then
+  local repo="$1"
+  if [[ -z "$repo" ]]; then
+    read -r repo
+  fi
+  if [[ -z "$repo" ]]; then
     echo "Error: repository name is required."
     echo "Use '-h' for help."
     return 1
@@ -62,11 +70,15 @@ function ghsc() {
     echo "Example: grpf repo-name" 
     return 0
   fi
-  gh repo list | grep -E $1  | awk '{print $1}'
+  gh repo list | grep -E $repo  | awk '{print $1}'
 }
 
 function ghrm() {
-  if [[ -z "$1" ]]; then
+  local repo="$1"
+  if [[ -z "$repo" ]]; then
+    read -r repo
+  fi  
+  if [[ -z "$repo" ]]; then
     echo "Error: repository name is required."
     echo "Use '-h' for help."
     return 1
@@ -77,11 +89,15 @@ function ghrm() {
     echo "Example: grprm my-repo"
     return 0
   fi
-  gh repo delete "$1" --yes
+  gh repo delete "$repo" --yes
 }
 
 function ghsc() {
-  if [[ -z "$1" ]]; then
+  local repo="$1"
+  if [[ -z "$repo" ]]; then
+    read -r repo
+  fi
+  if [[ -z "$repo" ]]; then
     echo "Error: repository name is required."
     echo "Use '-h' for help."
     return 1
@@ -92,5 +108,25 @@ function ghsc() {
     echo "Example: grpsc carlino"
     return 0
   fi
-  echo $(gh repo list | grep -E $*  | awk '{print $1}' | sed -n 's/AI-4o\///p')
+  echo $(gh repo list | grep -E $repo  | awk '{print $1}' | sed -n 's/AI-4o\///p')
+}
+
+function ghurl() {
+  local repo="$1"
+  if [[ -z "$repo" ]]; then
+    read -r repo
+  fi
+  if [[ -z "$repo" ]]; then
+    echo "Error: repository name is required."
+    echo "Use '-h' for help."
+    return 1
+  fi
+
+  if [[ "$1" == "-h" || "$1" == "--help" ]]; then
+    echo "Usage: ghurl <repository name>"
+    echo "Prints the URL of the given repository"
+    echo "Example: grurl my-repo"
+    return 0
+  fi
+  echo "https://github.com/AI-4o/$repo"
 }
