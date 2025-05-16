@@ -22,9 +22,19 @@ alias tsk='llmtask'
 alias ai='aider --model sonnet' 
 
 # basic aliases
+alias e="echo"
 alias n='nvim'
+alias cn='create_note'
 alias to='touch'
 alias cpr='cp -r'
+
+alias bb="bash -c \"$b\""
+
+# similarly to vim macros, create a temp executable bash file to run later 
+alias ct="(cd ~/bin && echo '#!/usr/bin/env bash' > t ) && chmod +x ~/bin/t"
+
+# alias _tt  per appendere riga a t ---> in raycast
+ 
 # alias opa='open -a' ---> in raycast 
 # alias scp='pbcopy' ---> in raycast per avere aggiunta di |
 # alias spt='$(pbpaste)' ---> in raycast per avere aggiunta di |
@@ -69,6 +79,7 @@ export esp="~/Library/Application Support/espanso/match"
 export td=/Users/a.i./dev-test/note/todo.md
 export bk=/Users/a.i./dev-test/note/study/books
 export w=/opt/homebrew/var/www
+export b=~/bin
 
 ### RECURRENT FILES ###
 alias todo='nvim /Users/a.i./dev-test/note/todo.md'
