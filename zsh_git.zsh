@@ -46,5 +46,3 @@ function gup() {
     && git merge "$b" \
     && git checkout "$b" \
 }
-
-

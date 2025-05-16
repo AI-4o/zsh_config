@@ -31,9 +31,6 @@ alias cpr='cp -r'
 alias bb="bash -c \"$b\""
 alias fnd="find_files"
 
-# similarly to vim macros, create a temp executable bash file to run later 
-alias ct="(cd ~/bin && echo '#!/usr/bin/env bash' > t ) && chmod +x ~/bin/t"
-
 # alias _tt  per appendere riga a t ---> in raycast
  
 # alias opa='open -a' ---> in raycast 
@@ -54,9 +51,6 @@ alias venv='python3 -m venv'
 # awkp = awk '{print ${cursor}}'
 
 alias pn='python3'
-
-# c 
-
 
 # utmcl aliases
 alias uu='utmctl'
