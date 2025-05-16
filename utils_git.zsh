@@ -1,6 +1,5 @@
 # GIT
-alias gac="git_add_commit" 
-function git_add_commit() {
+function gac() {
   if [[ -z "$1" ]]; then
     echo "Errore: devi passare un messaggio di commit."
     return 1
@@ -16,8 +15,7 @@ function gacp() {
   git add . && git commit -m "$*" && git push
 }
 
-alias gpu="git_push_upstream"
-function git_push_upstream() {
+function gpu() {
   local current_branch=$(git branch --show-current 2>/dev/null)
   
   # Check if getting the branch name succeeded
