@@ -1,5 +1,5 @@
 # appendi contenuto a t
-function tt() {
+function at() {
   if [[ -z "$1" ]]; then
     echo "Usage: _tt <"string">"
     return 1
@@ -9,6 +9,6 @@ function tt() {
 }
 
 # fai modifica veloce a t
-function ttm() {
+function mt() {
   (cd ~/bin && nvim t)
 }

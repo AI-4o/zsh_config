@@ -29,6 +29,7 @@ alias to='touch'
 alias cpr='cp -r'
 
 alias bb="bash -c \"$b\""
+alias fnd="find_files"
 
 # similarly to vim macros, create a temp executable bash file to run later 
 alias ct="(cd ~/bin && echo '#!/usr/bin/env bash' > t ) && chmod +x ~/bin/t"
