@@ -12,9 +12,12 @@
 . /users/a.i./zsh/react.zsh
 . /users/a.i./zsh/rust.zsh
 . /users/a.i./zsh/vercel.zsh
+. /users/a.i./zsh/langchain.zsh
+
 
 # stom cli 
 alias tsk='llmtask'
+alias oo="open -a 'chatGPT'"
 
 # FE
 #

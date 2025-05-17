@@ -9,7 +9,7 @@ function rwhile() {
 }
 
 # creation of temp macros scripts
-function cr() {
+function ac() {
   if [[ "$1" == "-h" ]]; then
     echo "Usage: ct [nome_script]"
     return 0 
@@ -52,5 +52,3 @@ function at() {
   (cd ~/bin && echo -e "$code" >> t)
 }
 
-
-alias fn="function f(){} "
