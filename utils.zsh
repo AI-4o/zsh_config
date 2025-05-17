@@ -1,3 +1,14 @@
+
+# execute a command on each line of a stdin
+function rwhile() {
+  local commands="$*"
+
+  while IFS= read -r l; do
+    eval "$commands"
+  done 
+}
+
+# creation of temp macros scripts
 function cr() {
   if [[ "$1" == "-h" ]]; then
     echo "Usage: ct [nome_script]"
@@ -12,32 +23,34 @@ function cr() {
   (cd ~/bin && echo '#!/usr/bin/env bash' > "$1") && chmod +x ~/bin/"$1"
 }
 
+function a() {
+  local name="$1"
+  local code="$2"
+
+  if [[ -z "$name" || -z "$code"  ]]; then
+    echo "Usage: a [nome_script] [comando]"
+    echo "Append the commands to the script file"
+    return 1
+  fi
+
+  (cd ~/bin && echo -e "$code" >> "$name")
+
+}
+
+# questa rimane per la sua utilità in quanto supporta anche stdin 
 function at() {
+  local code=""
+
   if [[ -z "$1" ]]; then
-    echo "Usage: at <"string">"
-    return 1
+    while IFS= read -r line; do
+      code+="$line"$'\n'
+    done
+  else
+    code="$*"
   fi
 
-  (cd ~/bin && echo "$*" >> t) 
+  (cd ~/bin && echo -e "$code" >> t)
 }
 
-function ab() {
-  if [[ -z "$1" ]]; then
-    echo "Usage: ab <"string">"
-    return 1
-  fi
 
-  (cd ~/bin && echo "$*" >> b) 
-}
-
-function ac() {
-  if [[ -z "$1" ]]; then
-    echo "Usage: ac <"string">"
-    return 1
-  fi
-
-  (cd ~/bin && echo "$*" >> c) 
-}
-
-# todo: edit at so that it can add new lines to a custom script, not only
-# the t script
+alias fn="function f(){} "
