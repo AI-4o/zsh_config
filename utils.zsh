@@ -1,6 +1,6 @@
 
 # execute a command on each line of a stdin
-function rwhile() {
+rwhile() {
   local commands="$*"
 
   while IFS= read -r l; do
@@ -9,7 +9,7 @@ function rwhile() {
 }
 
 # creation of temp macros scripts
-function ac() {
+ac() {
   if [[ "$1" == "-h" ]]; then
     echo "Usage: ct [nome_script]"
     return 0 
@@ -23,7 +23,7 @@ function ac() {
   (cd ~/bin && echo '#!/usr/bin/env bash' > "$1") && chmod +x ~/bin/"$1"
 }
 
-function a() {
+a() {
   local name="$1"
   local code="$2"
 
@@ -38,7 +38,7 @@ function a() {
 }
 
 # questa rimane per la sua utilità in quanto supporta anche stdin 
-function at() {
+at() {
   local code=""
 
   if [[ -z "$1" ]]; then
@@ -52,3 +52,10 @@ function at() {
   (cd ~/bin && echo -e "$code" >> t)
 }
 
+_x() {
+  if [[ -z "$1" ]]; then
+    x="$(cat)"
+  else
+    x="$(eval "$1")"
+  fi
+}
