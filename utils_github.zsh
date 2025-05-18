@@ -111,7 +111,7 @@ function ghsc() {
   echo $(gh repo list | grep -E $repo  | awk '{print $1}' | sed -n 's/AI-4o\///p')
 }
 
-function ghurl() {
+ghu() {
   local repo="$1"
   if [[ -z "$repo" ]]; then
     read -r repo
@@ -128,5 +128,6 @@ function ghurl() {
     echo "Example: grurl my-repo"
     return 0
   fi
-  echo "https://github.com/AI-4o/$repo"
+  url="https://github.com/$repo"
+  echo "https://github.com/$repo"
 }
