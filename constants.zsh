@@ -27,19 +27,21 @@ alias ai='aider --model sonnet'
 # basic aliases
 alias e="echo"
 alias n='nvim'
-alias cn='create_note'
+alias cn='/Users/a.i./bin/__aisoft_kills__/create_note'
 alias to='touch'
 alias cpr='cp -r'
+alias we="/Applications/WezTerm.app/Contents/MacOS/wezterm start --cwd \"$PWD\""
+alias cl="/Users/a.i./bin/__aisoft_kills__/clean_temp_scripts"
 
 alias bb="bash -c \"$b\""
-alias fnd="find_files"
+alias fnd="/Users/a.i./bin/__aisoft_kills__/find_files"
 
 # alias _tt  per appendere riga a t ---> in raycast
  
-# alias opa='open -a' ---> in raycast 
+# alias opa='open -a' ---> in raycast f
 # alias scp='pbcopy' ---> in raycast per avere aggiunta di |
 # alias spt='$(pbpaste)' ---> in raycast per avere aggiunta di |
-alias rmf='rm -rf'
+alias rmf='rm -rf'f
 # alias xi='xargs -I {}' ---> in raycast per avere aggiunta di |
 alias mkd='mkdir'  
 alias lcl='open-localhost'
