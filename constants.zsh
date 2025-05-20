@@ -27,6 +27,7 @@ alias ai='aider --model sonnet'
 # basic aliases
 alias e="echo"
 alias n='nvim'
+alias nn="nvim temp.txt"
 alias cn='/Users/a.i./bin/__aisoft_kills__/create_note'
 alias to='touch'
 alias cpr='cp -r'

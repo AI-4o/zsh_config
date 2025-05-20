@@ -1,3 +1,4 @@
 # Git ignore file
 # Ignore secrets file
 secrets.zsh
+.aider*
