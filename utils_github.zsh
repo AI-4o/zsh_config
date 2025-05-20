@@ -1,5 +1,11 @@
 # GITHUB
 
+
+
+
+alias ghlogin='gh auth login'
+alias ghlogout='gh auth logout'
+
 function ghc() {
   if [[ -z "$1" ]]; then
     echo "Error: repository name is required."
