@@ -22,5 +22,7 @@ alias gsa='git stash apply'
 alias gsp='git stash push'
 alias gsl='git stash list'
 alias gsr='git stash drop'
+alias gl="git log"
+alias gbrename="git branch -m"
 
 
