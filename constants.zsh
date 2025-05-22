@@ -34,6 +34,7 @@ alias to='touch'
 alias cpr='cp -r'
 alias we="/Applications/WezTerm.app/Contents/MacOS/wezterm start --cwd \"$PWD\""
 alias cl="/Users/a.i./bin/__aisoft_kills__/clean_temp_scripts"
+alias dsa="ls -la | awk '{print \$9}' "
 
 alias bb="bash -c \"$b\""
 alias fnd="/Users/a.i./bin/__aisoft_kills__/find_files"
