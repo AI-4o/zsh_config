@@ -13,6 +13,7 @@
 . /users/a.i./zsh/rust.zsh
 . /users/a.i./zsh/vercel.zsh
 . /users/a.i./zsh/langchain.zsh
+. /users/a.i./zsh/digital_ocean.zsh
 
 
 # stom cli 
@@ -36,6 +37,12 @@ alias cl="/Users/a.i./bin/__aisoft_kills__/clean_temp_scripts"
 
 alias bb="bash -c \"$b\""
 alias fnd="/Users/a.i./bin/__aisoft_kills__/find_files"
+alias sw="/Users/a.i./bin/__aisoft_kills__/switch_warp_window"
+
+
+# hammerspoofunctions
+
+alias ws="hs -c \"sw()\""
 
 # alias _tt  per appendere riga a t ---> in raycast
  
@@ -62,6 +69,9 @@ alias pn='python3'
 alias uu='utmctl'
 
 
+
+
+
 ### NODE.JS ###
 export NODE_OPTIONS="--no-deprecation"
 
@@ -81,6 +91,7 @@ export td=/Users/a.i./dev-test/note/todo.md
 export bk=/Users/a.i./dev-test/note/study/books
 export w=/opt/homebrew/var/www
 export b=~/bin
+export hs=/Users/a.i./.hammerspoon
 
 ### RECURRENT FILES ###
 alias otd='nvim /Users/a.i./dev-test/note/todo.md'
