@@ -12,5 +12,5 @@ alias oca='open -a "Calendar"'
 alias kca='pkill -x "Calendar"'
 alias oou='open -a "Outlook"'
 alias kou='pkill -x "Outlook"'
-
-
+alias ogp="open -a 'ChatGPT'"
+alias kgp="pkill -x 'ChatGPT'"

@@ -87,7 +87,6 @@ export zz=~/.zshrc
 export z=~/zsh/
 export n=~/.config/nvim/
 export st=~/dev-test/note/study 
-export esp="~/Library/Application Support/espanso/match" 
 export td=/Users/a.i./dev-test/note/todo.md
 export bk=/Users/a.i./dev-test/note/study/books
 export w=/opt/homebrew/var/www
