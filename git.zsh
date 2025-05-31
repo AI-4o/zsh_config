@@ -7,6 +7,8 @@ alias gpl='git pull'
 alias gcz='git cz'
 alias gs='git status'
 alias gbc='git branch --show-current'
+alias gb="git branch"
+alias gbm="git branch -m"
 alias gbv='git branch -v'
 alias gbd='git branch -D'
 alias gr='git restore .'
@@ -14,15 +16,16 @@ alias agg='git branch --show-current | pbcopy && git checkout x &&   git branch 
 alias grea='git remote add origin'
 alias grev='git remote -v'
 alias grerm='git remote remove origin'
-alias grpl='gh repo list'
 alias gm='git merge'
 alias gff='git diff'
 alias gst='git stash'
 alias gsa='git stash apply'
 alias gsp='git stash push'
 alias gsl='git stash list'
+alias gsc='git stash clear'
 alias gsr='git stash drop'
 alias gl="git log"
 alias gbrename="git branch -m"
+
 
 

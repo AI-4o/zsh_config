@@ -27,6 +27,7 @@ alias ai='aider --model sonnet'
 
 # basic aliases
 alias e="echo"
+alias p="pwd | pbcopy && pwd"
 alias n='nvim'
 alias nn="nvim temp.txt"
 alias cn='/Users/a.i./bin/__aisoft_kills__/create_note'
@@ -66,8 +67,7 @@ alias venv='python3 -m venv'
 
 alias pn='python3'
 
-# utmcl aliases
-alias uu='utmctl'
+
 
 
 

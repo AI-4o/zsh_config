@@ -6,6 +6,7 @@
 alias ghlogin='gh auth login'
 alias ghlogout='gh auth logout'
 
+
 function ghc() {
   if [[ -z "$1" ]]; then
     echo "Error: repository name is required."
@@ -60,26 +61,7 @@ function gho() {
   gh repo view $repo -w
 }
 
-function ghsc() {
-  local repo="$1"
-  if [[ -z "$repo" ]]; then
-    read -r repo
-  fi
-  if [[ -z "$repo" ]]; then
-    echo "Error: repository name is required."
-    echo "Use '-h' for help."
-    return 1
-  fi
-  if [[ "$1" == "-h" || "$1" == "--help" ]]; then
-    echo "Usage: grpf <repository name>"
-    echo "lists the gh repos that have name containing the given string"
-    echo "Example: grpf repo-name" 
-    return 0
-  fi
-  gh repo list | grep -E $repo  | awk '{print $1}'
-}
-
-function ghrm() {
+function ghd() {
   local repo="$1"
   if [[ -z "$repo" ]]; then
     read -r repo
