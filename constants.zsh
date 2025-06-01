@@ -7,7 +7,7 @@
 . /users/a.i./zsh/docker.zsh
 . /users/a.i./zsh/git.zsh
 . /users/a.i./zsh/ollama.zsh
-. /users/a.i./zsh/pip.zsh
+. /users/a.i./zsh/python.zsh
 . /users/a.i./zsh/pnpm.zsh
 . /users/a.i./zsh/react.zsh
 . /users/a.i./zsh/rust.zsh
@@ -57,7 +57,6 @@ alias mkd='mkdir'
 alias lcl='open-localhost'
 alias chx='chmod +x'
 
-alias venv='python3 -m venv'
 
 # awk aliases
 #
@@ -65,7 +64,6 @@ alias venv='python3 -m venv'
 #
 # awkp = awk '{print ${cursor}}'
 
-alias pn='python3'
 
 
 
@@ -80,19 +78,19 @@ export NODE_OPTIONS="--no-deprecation"
 export v=~/dev-test/
 export c=/Users/a.i./Library/Mobile\ Documents/com~apple~CloudDocs/cloud-docs
 export d=/Users/a.i./Downloads
-export nt=~/dev-test/note
+export nt=~/note
 export s=~/dev-test/soft
 export sc=~/dev-test/scripts/
 export zz=~/.zshrc
 export z=~/zsh/
 export n=~/.config/nvim/
 export st=~/dev-test/note/study 
-export td=/Users/a.i./dev-test/note/todo.md
-export bk=/Users/a.i./dev-test/note/study/books
+export td=/Users/a.i./note/todo.md
+export e=/Users/a.i./e
 export w=/opt/homebrew/var/www
 export b=~/bin
 export hs=/Users/a.i./.hammerspoon
 
 ### RECURRENT FILES ###
-alias otd='nvim /Users/a.i./dev-test/note/todo.md'
-alias ocred='nvim /Users/a.i./dev-test/note/credenziali.md'
+alias otd='nvim /Users/a.i./note/todo.md'
+alias ocred='nvim /Users/a.i./note/credenziali.md'

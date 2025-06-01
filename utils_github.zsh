@@ -22,7 +22,7 @@ function ghc() {
     echo "no option: Create a private repository"
 
     echo "Creates a new repository on GitHub and adds it as the origin remote."
-    echo "Example: gcrepo my-new-repo"
+    echo "Example: ghc my-new-repo"
     return 0
   fi
   if [[ "$2" == "-p" ]]; then
