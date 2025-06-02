@@ -11,7 +11,9 @@ rwhile() {
 # creation of temp macros scripts
 ac() {
   if [[ "$1" == "-h" ]]; then
+    echo "create a script template in ~/bin with given name."
     echo "Usage: ct [nome_script]"
+
     return 0 
   fi
 
@@ -26,6 +28,13 @@ ac() {
 a() {
   local name="$1"
   local code="$2"
+
+  if [[ "$1" == "-h" ]]; then
+    echo "Append the commands to the script file"
+    echo "Usage: a [nome_script] [comando]"
+    return 0 
+  fi
+
 
   if [[ -z "$name" || -z "$code"  ]]; then
     echo "Usage: a [nome_script] [comando]"

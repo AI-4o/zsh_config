@@ -26,20 +26,20 @@ alias oo="open -a 'chatGPT'"
 alias ai='aider --model sonnet' 
 
 # basic aliases
-alias e="echo"
 alias p="pwd | pbcopy && pwd"
 alias n='nvim'
-alias nn="nvim temp.txt"
-alias cn='/Users/a.i./bin/__aisoft_kills__/create_note'
 alias to='touch'
 alias cpr='cp -r'
-alias we="/Applications/WezTerm.app/Contents/MacOS/wezterm start --cwd \"$PWD\""
 alias cl="/Users/a.i./bin/__aisoft_kills__/clean_temp_scripts"
-alias dsa="ls -la | awk '{print \$9}' "
+alias lsa="ls -la"
 
-alias bb="bash -c \"$b\""
-alias fnd="/Users/a.i./bin/__aisoft_kills__/find_files"
+alias fnd="/Users/a.i./bin/__aisoft_kills__/aisoft_find"
 alias sw="/Users/a.i./bin/__aisoft_kills__/switch_warp_window"
+
+alias we="/Applications/WezTerm.app/Contents/MacOS/wezterm start --cwd \"$PWD\""
+alias cn='/Users/a.i./bin/__aisoft_kills__/create_note'
+
+
 
 
 # hammerspoofunctions
