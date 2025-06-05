@@ -12,7 +12,7 @@ alias gbc='git branch --show-current'
 alias gbm="git branch -m"
 alias gbv='git branch -v'
 alias gbd='git branch -D'
-alias gba="git branch -a" # see al branches, local and remote
+alias gba="git fetch --prune && git branch -a" # see al branches, local and remote
 
 alias gr='git restore .'
 alias agg='git branch --show-current | pbcopy && git checkout x &&   git branch --show-current  | pbcopy && git pull && git checkout $pippo[1] && git merge $pippo[2] && git push &&  pbclear'
@@ -32,6 +32,3 @@ alias gl="git log"
 alias gbrename="git branch -m"
 
 alias gbrr="git push origin --delete " # delete a remote branch
-
-
-
