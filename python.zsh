@@ -8,7 +8,7 @@ alias ppl='pip list'
 
 # python3
 
-alias vvini='python3 -m venv .venv'
+alias vvi='python3 -m venv .venv'
 alias vva=". .venv/bin/activate" 
 
 alias pn='python3'

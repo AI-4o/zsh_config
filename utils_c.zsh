@@ -2,9 +2,9 @@
 
 call() {
   if [[ "$1" == "-h" || "$1" == "--help" ]]; then
-    echo "Usage: ccr path/to/dir"
+    echo "Usage: call path/to/dir"
     echo "Compile and run all .c files in the given directory"
-    echo "Example: ccr ."
+    echo "Example: call ."
     return 0
   fi
 
@@ -27,9 +27,9 @@ call() {
 
 c() {
     if [[ "$1" == "-h" || "$1" == "--help" ]]; then
-    echo "Usage: ccr [path/to/dir]"
+    echo "Usage: c [path/to/dir]"
     echo "Compile and run the .c file in the current directory"
-    echo "Example: ccr cippa_lippa.c"
+    echo "Example: c cippa_lippa.c"
     return 0
     fi
 
