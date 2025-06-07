@@ -68,3 +68,24 @@ _x() {
     x="$(eval "$1")"
   fi
 }
+
+updir() {
+  # updir -- salva in x il valore della dir attuale e risale di n dir (default 1)
+  local n=1
+  export x=$(pwd)
+
+  if [[ "$1" == "-h" ]]; then
+    echo "Go up of n dirs (default 1) and save the current dir in the exported variable x"
+    echo "Usage: updir [N]"
+    return 0
+  fi
+
+  if [[ -n "$1" ]]; then
+    n="$1"
+  fi
+
+  for ((i=0; i<n; i++)); do
+    cd .. || return 1
+  done
+}
+alias upd="updir"
