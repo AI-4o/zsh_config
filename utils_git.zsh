@@ -52,10 +52,11 @@ function git_update_branch() {
 }
 
 alias gupp="git_update_branch_push"
+
 function git_update_branch_push(){
-  local x=$1
-  if [[ -z "$x" ]]; then
-    read -r x
+  local y=$1
+  if [[ -z "$y" ]]; then
+    read -r y 
   fi
   if [[ "$1" == "-h" || "$1" == "--help" ]]; then
     echo "Usage: gup <branch name>"
@@ -63,14 +64,14 @@ function git_update_branch_push(){
     return 0
   fi
 
-  if [[ -z "$x" ]]; then
+  if [[ -z "$y" ]]; then
     echo "Error: branch name is required."
     echo "Use 'gpr -h' for help."
     return 1
   fi
 
   b=$(git branch --show-current) 
-  git checkout "$x" \
+  git checkout "$y" \
     && git merge "$b" \
     && fit push \
     && git checkout "$b" \
