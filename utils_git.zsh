@@ -50,3 +50,28 @@ function git_update_branch() {
     && git merge "$b" \
     && git checkout "$b" \
 }
+
+alias gupp="git_update_branch_push"
+function git_update_branch_push(){
+  local x=$1
+  if [[ -z "$x" ]]; then
+    read -r x
+  fi
+  if [[ "$1" == "-h" || "$1" == "--help" ]]; then
+    echo "Usage: gup <branch name>"
+    echo " git checkout to the specified branch, merge the current branch with the original branch, push the branch, then go back to the original branch"
+    return 0
+  fi
+
+  if [[ -z "$x" ]]; then
+    echo "Error: branch name is required."
+    echo "Use 'gpr -h' for help."
+    return 1
+  fi
+
+  b=$(git branch --show-current) 
+  git checkout "$x" \
+    && git merge "$b" \
+    && fit push \
+    && git checkout "$b" \
+}
