@@ -73,6 +73,6 @@ function git_update_branch_push(){
   b=$(git branch --show-current) 
   git checkout "$y" \
     && git merge "$b" \
-    && fit push \
+    && git push \
     && git checkout "$b" \
 }
