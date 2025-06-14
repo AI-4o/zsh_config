@@ -53,7 +53,7 @@ alias ws="hs -c \"sw()\""
 # alias spt='$(pbpaste)' ---> in raycast per avere aggiunta di |
 alias rmf='rm -rf'
 # alias xi='xargs -I {}' ---> in raycast per avere aggiunta di |
-alias mkd='mkdir'  
+alias mkd='mkdir -p'  
 alias lcl='open-localhost'
 alias chx='chmod +x'
 
@@ -94,3 +94,4 @@ export hs=/Users/a.i./.hammerspoon
 ### RECURRENT FILES ###
 alias otd='nvim /Users/a.i./note/todo.md'
 alias ocred='nvim /Users/a.i./note/credenziali.md'
+alias oof="nvim /Users/a.i./note/obbiettivo-finale.md"

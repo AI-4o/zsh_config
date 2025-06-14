@@ -9,7 +9,7 @@ rwhile() {
 }
 
 # creation of temp macros scripts
-ac() {
+sc() {
   if [[ "$1" == "-h" ]]; then
     echo "create a script template in ~/bin with given name."
     echo "Usage: ct [nome_script]"
@@ -25,7 +25,7 @@ ac() {
   (cd ~/bin && echo '#!/usr/bin/env bash' > "$1") && chmod +x ~/bin/"$1"
 }
 
-a() {
+sa() {
   local name="$1"
   local code="$2"
 
@@ -46,20 +46,9 @@ a() {
 
 }
 
-# questa rimane per la sua utilità in quanto supporta anche stdin 
-at() {
-  local code=""
+alias sclean="/Users/a.i./bin/__aisoft_kills__/clean_temp_scripts"
+alias slist="/Users/a.i./bin/__aisoft_kills__/list_temp_scripts"
 
-  if [[ -z "$1" ]]; then
-    while IFS= read -r line; do
-      code+="$line"$'\n'
-    done
-  else
-    code="$*"
-  fi
-
-  (cd ~/bin && echo -e "$code" >> t)
-}
 
 _x() {
   if [[ -z "$1" ]]; then

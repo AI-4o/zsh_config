@@ -32,3 +32,4 @@ alias gl="git log"
 alias gbrename="git branch -m"
 
 alias gbrr="git push origin --delete " # delete a remote branch
+alias grign= "git rm --cached" # aggiorna la cache di git rimuovendo i files indicati (utile per aggioprnare quando si aggiungono percorsi al .gitignore)
