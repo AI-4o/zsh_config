@@ -14,6 +14,7 @@
 . /users/a.i./zsh/vercel.zsh
 . /users/a.i./zsh/langchain.zsh
 . /users/a.i./zsh/digital_ocean.zsh
+. /users/a.i./zsh/google.zsh
 
 
 # stom cli 
@@ -27,6 +28,7 @@ alias ai='aider --model sonnet'
 
 # basic aliases
 alias p="pwd | pbcopy && pwd"
+alias ..="cd ../"
 alias n='nvim'
 alias to='touch'
 alias cpr='cp -r'
@@ -35,12 +37,6 @@ alias lsa="ls -la"
 
 alias fnd="/Users/a.i./bin/__aisoft_kills__/aisoft_find"
 alias sw="/Users/a.i./bin/__aisoft_kills__/switch_warp_window"
-
-alias we="/Applications/WezTerm.app/Contents/MacOS/wezterm start --cwd \"$PWD\""
-alias cn='/Users/a.i./bin/__aisoft_kills__/create_note'
-
-
-
 
 # hammerspoofunctions
 
