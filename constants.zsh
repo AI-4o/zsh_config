@@ -28,7 +28,6 @@ alias ai='aider --model sonnet'
 
 # basic aliases
 alias p="pwd | pbcopy && pwd"
-alias ..="cd ../"
 alias n='nvim'
 alias to='touch'
 alias cpr='cp -r'

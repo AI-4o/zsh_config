@@ -61,7 +61,7 @@ _x() {
 updir() {
   # updir -- salva in x il valore della dir attuale e risale di n dir (default 1)
   local n=1
-  export x=$(pwd)
+  export m=$(pwd)
 
   if [[ "$1" == "-h" ]]; then
     echo "Go up of n dirs (default 1) and save the current dir in the exported variable x"
@@ -78,3 +78,11 @@ updir() {
   done
 }
 alias upd="updir"
+
+# alternative to updir using a sequence of points
+for i in $(seq 2 10); do
+    dots=$(printf '.%.0s' $(seq 1 $i))
+    body=$(printf 'cd ..; %.0s' $(seq 1 $((i - 1))
+))
+    eval "function $dots() { export m=\"\$(pwd)\"; $body }"
+done

@@ -14,3 +14,4 @@ alias oou='open -a "Outlook"'
 alias kou='pkill -x "Outlook"'
 alias ogp="open -a 'ChatGPT'"
 alias kgp="pkill -x 'ChatGPT'"
+alias crs="open -a 'cursor'"
