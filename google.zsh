@@ -1,5 +1,6 @@
 # google calendar
 alias cal="gcalcli"
+alias calag="gcalcli agenda"
 alias caladd="gcalcli --calendar 'AI main' quick --reminder '15m'"
 alias calw="gcalcli calw" # see the agend for the week
 alias calm="gcalcli calm" # see the agenda for the month
