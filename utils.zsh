@@ -58,28 +58,7 @@ _x() {
   fi
 }
 
-updir() {
-  # updir -- salva in x il valore della dir attuale e risale di n dir (default 1)
-  local n=1
-  export m=$(pwd)
-
-  if [[ "$1" == "-h" ]]; then
-    echo "Go up of n dirs (default 1) and save the current dir in the exported variable x"
-    echo "Usage: updir [N]"
-    return 0
-  fi
-
-  if [[ -n "$1" ]]; then
-    n="$1"
-  fi
-
-  for ((i=0; i<n; i++)); do
-    cd .. || return 1
-  done
-}
-alias upd="updir"
-
-# alternative to updir using a sequence of points
+#  go up of n=number-of-points dirs and save the starting dir in a variable m
 for i in $(seq 2 10); do
     dots=$(printf '.%.0s' $(seq 1 $i))
     body=$(printf 'cd ..; %.0s' $(seq 1 $((i - 1))

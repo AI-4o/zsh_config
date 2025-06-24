@@ -19,12 +19,8 @@
 
 # stom cli 
 alias tsk='llmtask'
-alias oo="open -a 'chatGPT'"
 
 # FE
-#
-# aider
-alias ai='aider --model sonnet' 
 
 # basic aliases
 alias p="pwd | pbcopy && pwd"
@@ -35,7 +31,6 @@ alias cl="/Users/a.i./bin/__aisoft_kills__/clean_temp_scripts"
 alias lsa="ls -la"
 
 alias fnd="/Users/a.i./bin/__aisoft_kills__/aisoft_find"
-alias sw="/Users/a.i./bin/__aisoft_kills__/switch_warp_window"
 
 # hammerspoofunctions
 
@@ -52,20 +47,6 @@ alias mkd='mkdir -p'
 alias lcl='open-localhost'
 alias chx='chmod +x'
 
-
-# awk aliases
-#
-# comandi delegati a raycast
-#
-# awkp = awk '{print ${cursor}}'
-
-
-
-
-
-
-
-
 ### NODE.JS ###
 export NODE_OPTIONS="--no-deprecation"
 
@@ -75,7 +56,6 @@ export c=/Users/a.i./Library/Mobile\ Documents/com~apple~CloudDocs/cloud-docs
 export d=/Users/a.i./Downloads
 export nt=~/note
 export s=~/dev-test/soft
-export sc=~/dev-test/scripts/
 export zz=~/.zshrc
 export z=~/zsh/
 export n=~/.config/nvim/
@@ -85,8 +65,10 @@ export e=/Users/a.i./e
 export w=/opt/homebrew/var/www
 export b=~/bin
 export hs=/Users/a.i./.hammerspoon
+export t=~/temp
+export hb=/opt/homebrew
+
 
 ### RECURRENT FILES ###
 alias otd='nvim /Users/a.i./note/todo.md'
 alias ocred='nvim /Users/a.i./note/credenziali.md'
-alias oof="nvim /Users/a.i./note/obbiettivo-finale.md"
