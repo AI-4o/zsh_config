@@ -1,0 +1,18 @@
+---
+description:  the list of the convetional alias for the prompts
+globs: 
+alwaysApply: true
+---
+the following is a list of conventions that map specific prompt forms to specific kinds of tasks to be executed.
+they are in the form: alias -> corresponding task
+
+- d -> document the code, the documentation should be aimed at a senior software engineer, so no obvious redundancies, only 
+        clear direct concise explanations
+- s -> give style following the styling conventions of this project
+- t -> write the tests for the code
+- c -> add the missing details according to the comments given
+- f -> fix
+
+example: 
+user gives prompts: s 
+this means the  "give style following the styling conventions of this project" is the intended prompt.

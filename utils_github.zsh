@@ -1,11 +1,7 @@
 # GITHUB
 
-
-
-
 alias ghlogin='gh auth login'
 alias ghlogout='gh auth logout'
-
 
 function ghc() {
   if [[ -z "$1" ]]; then
@@ -96,26 +92,6 @@ function ghsc() {
     echo "Example: grpsc carlino"
     return 0
   fi
-  echo $(gh repo list | grep -E $repo  | awk '{print $1}' | sed -n 's/AI-4o\///p')
-}
-
-ghu() {
-  local repo="$1"
-  if [[ -z "$repo" ]]; then
-    read -r repo
-  fi
-  if [[ -z "$repo" ]]; then
-    echo "Error: repository name is required."
-    echo "Use '-h' for help."
-    return 1
-  fi
-
-  if [[ "$1" == "-h" || "$1" == "--help" ]]; then
-    echo "Usage: ghurl <repository name>"
-    echo "Prints the URL of the given repository"
-    echo "Example: grurl my-repo"
-    return 0
-  fi
-  url="https://github.com/$repo"
-  echo "https://github.com/$repo"
+  m=$(echo $(gh repo list | grep -E $repo  | awk '{print $1}' | sed -n 's/AI-4o\///p'))
+  echo "$m"
 }

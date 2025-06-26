@@ -15,7 +15,8 @@
 . /users/a.i./zsh/langchain.zsh
 . /users/a.i./zsh/digital_ocean.zsh
 . /users/a.i./zsh/google.zsh
-
+. /users/a.i./zsh/aisoft_kills.zsh
+ 
 
 # stom cli 
 alias tsk='llmtask'
@@ -26,14 +27,12 @@ alias tsk='llmtask'
 alias p="pwd | pbcopy && pwd"
 alias n='nvim'
 alias to='touch'
-alias cpr='cp -r'
-alias cl="/Users/a.i./bin/__aisoft_kills__/clean_temp_scripts"
-alias lsa="ls -la"
-
+alias cp='cp -r' # copia directory e subdirectories
+alias mv="mv -v"
+alias lsa="ls -lah --color=auto"
 alias fnd="/Users/a.i./bin/__aisoft_kills__/aisoft_find"
 
 # hammerspoofunctions
-
 alias ws="hs -c \"sw()\""
 
 # alias _tt  per appendere riga a t ---> in raycast
@@ -59,7 +58,6 @@ export s=~/dev-test/soft
 export zz=~/.zshrc
 export z=~/zsh/
 export n=~/.config/nvim/
-export st=~/dev-test/note/study 
 export td=/Users/a.i./note/todo.md
 export e=/Users/a.i./e
 export w=/opt/homebrew/var/www
@@ -67,6 +65,7 @@ export b=~/bin
 export hs=/Users/a.i./.hammerspoon
 export t=~/temp
 export hb=/opt/homebrew
+export ais=/Users/a.i./bin/__aisoft_kills__
 
 
 ### RECURRENT FILES ###
