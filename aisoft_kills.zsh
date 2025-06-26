@@ -6,8 +6,12 @@ alias sca="script_add"
 alias sccl="/Users/a.i./bin/__aisoft_kills__/clean_temp_scripts"
 alias scl="/Users/a.i./bin/__aisoft_kills__/list_temp_scripts"
 
-# cursor 
+# cursor
 alias acr="/Users/a.i./bin/__aisoft_kills__/inject_cursor_rules"
+
+# other utilities
+alias cnm="/Users/a.i./bin/__aisoft_kills__/clean_node_modules"
+alias olh="/Users/a.i./bin/__aisoft_kills__/open_localhost"
 
 script_create() {
   if [[ "$1" == "-h" ]]; then
