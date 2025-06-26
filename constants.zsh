@@ -50,23 +50,29 @@ alias chx='chmod +x'
 export NODE_OPTIONS="--no-deprecation"
 
 ### CUSTOM GLOBAL VARIABLES OF DIRECTORIES ###
+
 export v=~/dev-test/
 export c=/Users/a.i./Library/Mobile\ Documents/com~apple~CloudDocs/cloud-docs
 export d=/Users/a.i./Downloads
 export nt=~/note
-export s=~/dev-test/soft
 export zz=~/.zshrc
 export z=~/zsh/
 export n=~/.config/nvim/
+
+# appunti 
 export td=/Users/a.i./note/todo.md
 export e=/Users/a.i./e
-export w=/opt/homebrew/var/www
-export b=~/bin
-export hs=/Users/a.i./.hammerspoon
-export t=~/temp
-export hb=/opt/homebrew
-export ais=/Users/a.i./bin/__aisoft_kills__
 
+export w=/opt/homebrew/var/www
+export hs=/Users/a.i./.hammerspoon
+export hb=/opt/homebrew
+
+# aisoft
+export aik=/Users/a.i./bin/__aisoft_kills__
+export b=~/bin
+export ais=~/aisoft
+
+export t=~/temp # temporary stuff 
 
 ### RECURRENT FILES ###
 alias otd='nvim /Users/a.i./note/todo.md'
