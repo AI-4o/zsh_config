@@ -71,6 +71,8 @@ export hb=/opt/homebrew
 export aik=/Users/a.i./bin/__aisoft_kills__
 export b=~/bin
 export ais=~/aisoft
+export s=~/aisoft/clienti
+
 
 export t=~/temp # temporary stuff 
 
