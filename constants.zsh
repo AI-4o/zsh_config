@@ -9,7 +9,6 @@
 . /users/a.i./zsh/ollama.zsh
 . /users/a.i./zsh/python.zsh
 . /users/a.i./zsh/pnpm.zsh
-. /users/a.i./zsh/react.zsh
 . /users/a.i./zsh/rust.zsh
 . /users/a.i./zsh/vercel.zsh
 . /users/a.i./zsh/langchain.zsh
@@ -43,7 +42,6 @@ alias ws="hs -c \"sw()\""
 alias rmf='rm -rf'
 # alias xi='xargs -I {}' ---> in raycast per avere aggiunta di |
 alias mkd='mkdir -p'  
-alias lcl='open-localhost'
 alias chx='chmod +x'
 
 ### NODE.JS ###

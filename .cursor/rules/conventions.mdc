@@ -1,18 +1,79 @@
 ---
-description:  the list of the convetional alias for the prompts
+description: the list of the convetional alias for the prompts
 globs: 
 alwaysApply: true
 ---
 the following is a list of conventions that map specific prompt forms to specific kinds of tasks to be executed.
 they are in the form: alias -> corresponding task
 
-- d -> document the code, the documentation should be aimed at a senior software engineer, so no obvious redundancies, only 
+- d@ or doc@ -> document the code, the documentation should be aimed at a senior software engineer, so no obvious redundancies, only 
         clear direct concise explanations
-- s -> give style following the styling conventions of this project
-- t -> write the tests for the code
-- c -> add the missing details according to the comments given
-- f -> fix
+- c@ or complete@ -> add the missing details according to the comments given
+- s@ or style@ -> give style following the styling conventions of this project
+- t@ or test@ -> write the tests for the code
+- f@ -> fix
+- r@ or format@ -> reformat the code: fix indenting and formatting
+- arule@ ->  add a .mdc file in the .cursor/rules directory, ie create a new rule, following the conventions: 
+             the flag -d indicates the descriprion of the rule
+             the flag -b indicates the body of the rule
+             the flag -l indicates whether the body sould be litterally the one specified or it should be created by you following 
+             the soecifications of -b
+             the flag -a: true then alwaysApply set a true, if -a is not specified then alwaysApply is set to false (which is the default)
+
+             if no flag -name is given, then the file will be named in a way that reflects its content
 
 example: 
-user gives prompts: s 
+user gives prompts: s@  
 this means the  "give style following the styling conventions of this project" is the intended prompt.
+
+it may happen that other text is provided after the alias, in which case such text is intended as a specification for the task;
+
+example: 
+arule@ -d "description of how to style the html elements in the project" -b "you find the css to be applied in the global.css file, no other classes or styles are to be applied to define the colors"
+
+is transformed in the  "style.mdc", containing: 
+"
+---
+description:  description of how to style the html elements in the project
+globs: 
+alwaysApply: false
+---
+you find the css to be applied in the global.css file, no other classes or styles are to be applied to define the colors
+"
+always remember to create the initial graymatter part with the fields "description", "globs", "alwaysApply" 
+
+more examples for arule.:
+
+1. Creating a rule with custom name and alwaysApply:
+arule@ -name "api-conventions" -d "API endpoint naming conventions" -b "All API endpoints should follow REST conventions with kebab-case URLs" -a true
+
+Result: "api-conventions.mdc" with alwaysApply: true
+
+2. Creating a test-related rule:
+arule@ -d "Test file organization" -b "Test files should be placed in __tests__ directory and follow the naming pattern *.test.js"
+
+Result: "test-file-organization.mdc" (auto-named) with alwaysApply: false
+
+3. Using literal flag for exact content:
+arule@ -name "import-order" -d "Import statement ordering" -b "1. React imports\n2. Third-party imports\n3. Local imports" -l true
+
+Result: Content will be exactly as specified in -b flag
+
+4. Creating a database rule with specifications for AI generation:
+arule@ -d "Database schema conventions" -b "generate conventions for naming tables, columns, and relationships in PostgreSQL following industry best practices"
+
+Result: AI will generate detailed conventions based on the specification
+
+5. Creating an always-applied security rule:
+arule@ -name "security" -d "Security best practices" -b "Never expose API keys, use environment variables, validate all inputs" -a true -l true
+
+Result: "security.mdc" with exact content and alwaysApply: true
+
+6. Simple rule without custom name:
+arule@ -d "Error handling patterns" -b "describe patterns for consistent error handling across the application"
+
+Result: "error-handling-patterns.mdc" (auto-named from description)
+
+
+
+

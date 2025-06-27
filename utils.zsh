@@ -1,4 +1,3 @@
-
 # execute a command on each line of a stdin
 rwhile() {
   local commands="$*"
@@ -31,16 +30,17 @@ function cdn() {
 }
 
 
-
-
-
-_x() {
-  if [[ -z "$1" ]]; then
-    x="$(cat)"
-  else
-    x="$(eval "$1")"
-  fi
-}
+# create a family of functions for storing piped stdin into variables
+alphabet=(a b c d e f g h i j k l m n o p q r s t u v w x y z)
+for letter in ${alphabet[@]}; do
+    eval "_$letter() { 
+        if [[ -z \$1 ]]; then 
+            $letter=\$(cat)
+        else 
+            $letter=\$(eval \"\$1\")
+        fi 
+    }"
+done
 
 #  go up of n=number-of-points dirs and save the starting dir in a variable m
 for i in $(seq 2 10); do

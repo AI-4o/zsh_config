@@ -12,6 +12,7 @@ alias acr="/Users/a.i./bin/__aisoft_kills__/inject_cursor_rules"
 # other utilities
 alias cnm="/Users/a.i./bin/__aisoft_kills__/clean_node_modules"
 alias olh="/Users/a.i./bin/__aisoft_kills__/open_localhost"
+alias open-localhost="/Users/a.i./bin/__aisoft_kills__/open_localhost"
 
 script_create() {
   if [[ "$1" == "-h" ]]; then
