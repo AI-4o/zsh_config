@@ -8,26 +8,34 @@ rwhile() {
 }
 
 function cdn() {
-  target_dir=$1
   
-  if [[ "$1" == "-h" || "$1" == "--help" ]]; then
-        echo "Usage: cdn [path/to/dir]"
-        return 0 
-  fi
+  if [[ -n "$1" ]]; then  # an argument is provided   
+    target_dir=$1
+    
+    if [[ "$1" == "-h" || "$1" == "--help" ]]; then
+          echo "Usage: cdn [path/to/dir]"
+          return 0 
+    fi
 
-  if [[ -z "$1" ]]; then
-    echo "error: missing argument"
-    echo "Usage: cdn [path/to/dir]"
-    return 1
-  fi
+    if [[ -z "$1" ]]; then
+      echo "error: missing argument"
+      echo "Usage: cdn [path/to/dir]"
+      return 1
+    fi
 
-  if [[ ! -d "$target_dir" ]]; then
-        echo "Error: Directory '$target_dir' does not exist"
-        return 1
-  fi
+    if [[ ! -d "$target_dir" ]]; then
+          echo "Error: Directory '$target_dir' does not exist"
+          return 1
+    fi
+    cd $target_dir && nvim 
 
-  cd "$target_dir" && nvim
+  elif [ -p /dev/stdin ]; then   # there is a stdin that is given by a pipe
+    read -r firstline
+    cdn "$firstline"
+    return 0
+  fi
 }
+
 
 
 # create a family of functions for storing piped stdin into variables
