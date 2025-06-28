@@ -21,7 +21,7 @@ function ghc() {
     echo "Example: ghc my-new-repo"
     return 0
   fi
-  if [[ "$2" == "-p" ]]; then
+  if [[ "$2" == "-public" ]]; then
     gh repo create "$1" --source=. --public --remote=origin
     return 0
   fi
