@@ -15,7 +15,7 @@
 . /users/a.i./zsh/digital_ocean.zsh
 . /users/a.i./zsh/google.zsh
 . /users/a.i./zsh/aisoft_kills.zsh
- 
+. /users/a.i./zsh/task_0px.zsh 
 
 # stom cli 
 alias tsk='llmtask'

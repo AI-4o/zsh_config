@@ -7,7 +7,7 @@ rwhile() {
   done 
 }
 
-_cdn() {
+cdn() {
   # go to provided dir and open it with nvim 
   
   if [[ -n "$1" ]]; then  # an argument is provided   
@@ -33,7 +33,7 @@ _cdn() {
 
   elif [ -p /dev/stdin ]; then   # there is a stdin that is given by a pipe
     read -r firstline
-    _cdn "$firstline"
+    cdn "$firstline"
     return 0
   fi
 }
