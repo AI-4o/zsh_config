@@ -8,12 +8,14 @@ rwhile() {
 }
 
 function cdn() {
+  # go to provided dir and open it with nvim 
   
   if [[ -n "$1" ]]; then  # an argument is provided   
     target_dir=$1
     
     if [[ "$1" == "-h" || "$1" == "--help" ]]; then
           echo "Usage: cdn [path/to/dir]"
+          echo "also supports piped input: hr_bukkake_face_droplets_container | cdn"
           return 0 
     fi
 
