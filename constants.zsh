@@ -30,6 +30,7 @@ alias cp='cp -r' # copia directory e subdirectories
 alias mv="mv -v"
 alias lsa="ls -lah --color=auto"
 alias fnd="/Users/a.i./bin/__aisoft_kills__/aisoft_find"
+alias capp="cat <<∆ >" # create a new file and populate it with here-doc redirection
 
 # hammerspoofunctions
 alias ws="hs -c \"sw()\""
