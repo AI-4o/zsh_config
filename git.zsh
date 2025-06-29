@@ -37,3 +37,44 @@ alias gft="git fetch"
 
 alias gbrd="git push origin --delete " # delete a remote branch
 alias guig= "git rm --cached" # aggiorna la cache di git rimuovendo i files indicati (utile per aggioprnare quando si aggiungono percorsi al .gitignore)
+
+
+
+# git worktree 
+alias gwt="git worktree"
+alias gwtl="git worktree list"
+
+gwtrm() { # rimuove worktrees che matchano con pattern di $1
+  if [[ -z "$1" ]]; then
+    echo "Usage: gtrm <pattern>"
+    return 1
+  fi
+
+  local pattern="$1"
+  local worktrees
+
+  # Ottieni i path delle worktree che matchano il pattern
+  worktrees=$(git worktree list --porcelain | awk '/worktree / {print $2}' | grep -e "$pattern")
+
+  if [[ -z "$worktrees" ]]; then
+    echo "Nessuna worktree trovata con il pattern: $pattern"
+    return 0
+  fi
+
+  # Itera e rimuovi ciascuna worktree trovata
+  for w in $worktrees; do
+    echo "Rimuovo worktree: $w"
+    git worktree remove "$w"
+  done
+}
+
+gwtc() {
+  out_dir=$2
+  branch_name=$1
+  if [[ -z "$1" || -z "$2" ]]; then
+    echo "Usage: gtc <branch_name> <output_directory>"
+    return 1
+  fi
+  git worktree $1 $2
+}
+ 

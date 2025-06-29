@@ -16,6 +16,9 @@
 . /users/a.i./zsh/google.zsh
 . /users/a.i./zsh/aisoft_kills.zsh
 . /users/a.i./zsh/task_0px.zsh 
+. /users/a.i./zsh/task_0px.zsh 
+. /users/a.i./zsh/hammerspoon.zsh 
+. /users/a.i./zsh/aisoft.zsh 
 
 # stom cli 
 alias tsk='llmtask'
@@ -31,9 +34,6 @@ alias mv="mv -v"
 alias lsa="ls -lah --color=auto"
 alias fnd="/Users/a.i./bin/__aisoft_kills__/aisoft_find"
 alias ccat="cat <<∆ >" # create a new file and populate it with here-doc redirection
-
-# hammerspoofunctions
-alias ws="hs -c \"sw()\""
 
 # alias _tt  per appendere riga a t ---> in raycast
  
